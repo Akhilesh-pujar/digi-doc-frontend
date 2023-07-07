@@ -16,7 +16,7 @@ function NavSearch() {
     }
     function handleClick()
     {
-      if(search!="")
+      if(search !== "")
       {
         navigate("/documents/" + search)
       }
@@ -29,7 +29,7 @@ function NavSearch() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-none">
             <div className="container-fluid">
             <a className="navbar-brand" href="/">
-                DigiDoc
+               <img src="./images/logo.png" alt="logo" width="150"/>
             </a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon"></span>
@@ -45,16 +45,16 @@ function NavSearch() {
                
                 </ul>
             </div>
-            <Form className="d-flex search-nav">
+            <Form className="d-flex  align-items-center justify-content-center search-nav">
                 <FormControl
                     type="search"
                     placeholder="Search Documents"
-                    className="me-2"
+                    className="font-size-14px py-3"
                     aria-label="Search"
                     value={search}
                     onChange={handleChange}
                 />
-                <Button variant="outline-success" onClick={handleClick}>Search</Button>
+                <Button  className ="py-1" variant="outline-success" onClick={handleClick}>Search</Button>
             </Form>
             </div>
         </nav>

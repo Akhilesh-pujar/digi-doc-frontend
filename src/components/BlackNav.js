@@ -3,10 +3,10 @@ import {Link} from "react-router-dom";
 
 function BlackN() {
     return(
-        <nav className="navbar navbar-expand-lg navbar-dark bg-none">
+        <nav className="navbar navbar-expand-lg navbar-info bg-info">
             <div className="container-fluid">
-              <a className="navbar-brand blacknav" href="/">
-                DigiDoc
+              <a className="navbar-brand blacknav text-white" href="/">
+                <img src="./images/logo.png" alt="logo" width="150"/>
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon"></span>

@@ -17,7 +17,7 @@ function Home() {
   return(
       <div>
         <div id="homediv" className="p-5 mb-3 rounded-0">
-          <Navigation></Navigation>
+          <Navigation/>
           <div className="container-fluid py-5">
             <h1 className="display-5 fw-bold head1">Experience</h1>
             <h1 className="display-5 fw-bold head2">Digital-format</h1>
@@ -26,11 +26,10 @@ function Home() {
         </div>
         
         <div className="home-blog">
-          <img src="./images/blogman.jpg"></img>
           <div className="home-blog-heading">
             <h1>Fetch</h1>
             <h1>Read</h1>
-            <h1>and Store <button id="blogbit-heading" onClick={() => toDocument()}>Documents</button></h1>
+            <h1>& Store <button id="blogbit-heading" onClick={() => toDocument()}>Documents</button></h1>
           </div>
         </div>
 
@@ -38,7 +37,7 @@ function Home() {
           <div className="home-book-heading">
             <h1>Mark your <button id="bookbit-heading" onClick={() => toAttendance()}>Attendances</button></h1>
           </div>
-          <img src="./images/bookman.jpg"></img>
+          <img src="./images/bookman.jpg" alt="bookman"></img>
         </div>
 
         

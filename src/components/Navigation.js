@@ -6,7 +6,7 @@ function Navigation() {
         <nav className="navbar navbar-expand-lg navbar-dark bg-none">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">
-                DigiDoc
+                <img src="./images/logo.png" alt="logo" width="150"/>
               </a>
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                  <span className="navbar-toggler-icon"></span>
@@ -18,6 +18,12 @@ function Navigation() {
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/attendances">Attendances</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">About Us</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="#">Contact Us</Link>
                   </li>
                
                 </ul>

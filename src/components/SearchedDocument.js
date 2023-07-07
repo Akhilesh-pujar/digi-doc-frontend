@@ -47,7 +47,7 @@ function SearchedDocument() {
             { state.map((element) =>(
                 <Col>
                 <div className="card text-white mb-3 homepostouterdiv" key={element._id}>
-                    <img src="/images/card-img.jpg" className="card-img-top" alt="..."/>
+                    <img src="./images/card-img.jpg" className="card-img-top" alt="..."/>
                     <div className="card-body homepostcard">
                     <h1 className="card-title">{ element.title }</h1>
                     <p className="card-text">{ element.content.substring(0, 200) + "..." }</p>

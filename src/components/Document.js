@@ -6,16 +6,11 @@ import { useNavigate } from "react-router";
 import { Row } from "react-bootstrap";
 import { Col } from "react-bootstrap";
 import NavSearch from "./NavSearchDocument";
-import Scan from "../containers/Scan";
-import Write from "../containers/Write";
-import { ActionsContext } from "../contexts/context";
+import Nfc from './Nfc'
+
 
 function Docs() {
   const [state, setState] = useState([]);
-  const [actions, setActions] = useState(null);
-  const { scan, write } = actions || {};
-
-  const actionsValue = { actions, setActions };
 
   const msg = new SpeechSynthesisUtterance();
 
@@ -29,10 +24,7 @@ function Docs() {
     navigate("/composedoc");
   };
 
-  const onHandleAction = (actions) => {
-    setActions({ ...actions });
-    setTimeout(toCompose, 3000);
-  };
+  
 
   const getData = async () => {
     fetch("http://localhost:9000/")
@@ -60,7 +52,7 @@ function Docs() {
   return (
     <div>
       <Card className="bg-light blog-card">
-        <Card.Img src="/images/card.png" alt="Card image" />
+        <Card.Img src="/images/first.jpg" alt="Card image" />
         <Card.ImgOverlay>
           <NavSearch></NavSearch>
           <Card.Title className="blog-card-title">
@@ -69,18 +61,17 @@ function Docs() {
           <Card.Text>
             <button
               id="blogbit-button"
-              onClick={() => onHandleAction({ scan: "scanning", write: null })}
+              onClick={() => toCompose()}
             >
-              Scan Document
+              Compose Document
             </button>
           </Card.Text>
+          <Nfc/>
         </Card.ImgOverlay>
       </Card>
-      <ActionsContext.Provider value={actionsValue}>
-        {scan && <Scan />}
-        {write && <Write />}
-      </ActionsContext.Provider>
+
       {console.log(state)}
+
       <Row xs={1} md={2} className="g-1">
         {state.map((element) => (
           <Col>
@@ -104,8 +95,7 @@ function Docs() {
                 </p>
                 <a
                   onClick={() => toPost(element)}
-                  className="btn btn-outline-light"
-                >
+                  className="btn btn-outline-light">
                   Read More
                 </a>
                 <button

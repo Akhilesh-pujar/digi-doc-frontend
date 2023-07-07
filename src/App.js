@@ -10,22 +10,22 @@ import ComposeAttendance from "./components/ComposeAttendance";
 import DocCategory from "./components/SearchedDocument";
 import MisCategory from "./components/SearchedAttendance";
 
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <Router>
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/documents" element={<Document />} />
+          <Route exact path="/" element={<Home />}/>
+          <Route exact path="/documents" element={<Document />}/>
           <Route exact path="/attendances" element={<Attendance />} />
           <Route exact path="/postdoc" element={<PostDocument />} />
           <Route exact path="/postattend" element={<PostAttendance />} />
           <Route exact path="/composedoc" element={<ComposeDocument />} />
           <Route exact path="/composeattend" element={<ComposeAttendance />} />
           <Route exact path="/documents/:category" element={<DocCategory />} />
-          <Route exact path="/attendances/:mis" element={<MisCategory />} />
+          <Route exact path="/attendances/:mis" element={<MisCategory />}/>
         </Routes>
         <Footer/>
       </Router>

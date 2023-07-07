@@ -8,7 +8,7 @@ function Footer() {
     return (
         <div className="container bg-dark" id="foot">
             <footer className="py-5">
-              <div className="row">
+              <div className=" d-flex justify-content-between">
                 <div className="col-lg-5 col-xs-10">
                   <h5>DigiDoc</h5>
                   <p className="nav flex-column">
@@ -19,7 +19,7 @@ function Footer() {
                 <div className="col-lg-2 col-xs-10">
                   <h5>Quick Links</h5>
                   <ul className="nav flex-column">
-                    <li className="nav-item mb-2">
+                    <li className="nav-item my-2">
                       <Link to="/documents" className="nav-link p-0" style={{color: "inherit"}}>Documents</Link>
                     </li>
                     <li className="nav-item mb-2">
